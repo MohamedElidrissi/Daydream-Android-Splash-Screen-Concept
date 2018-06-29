@@ -1,0 +1,27 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.0"
+
+    defaultConfig {
+        applicationId "apps.mohamed.ddlogin"
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+	compile 'com.android.support:appcompat-v7:26.0.0'
+	compile 'com.android.support:design:26.0.0'
+	compile 'com.squareup.picasso:picasso:+'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
